@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('nodeTutorial:server');
+var debug = require('debug')('GitHubOnNode:server');
 var http = require('http');
 
 /**
