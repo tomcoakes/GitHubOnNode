@@ -3,14 +3,11 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-      },
-      build: {
-        src: 'src/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
-      }
+    jasmine: {
+      // Your project's source files
+      src : 'public/js/*.js',
+      // Your Jasmine spec files
+      specs : 'spec/*spec.js'
     }
   });
 
@@ -21,9 +18,6 @@ module.exports = function(grunt) {
 
   // // Default task(s).
   // grunt.registerTask('default', ['uglify']);
-
+  grunt.registerTask('default', 'jasmine');
 
 };
-
-
-
